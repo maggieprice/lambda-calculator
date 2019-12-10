@@ -20,3 +20,14 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+.button {
+    width:2rem;
+
+  
+    border-radius: 100%;
+    height: 2rem;
+}
+
+.button-zero{
+    width:50%;
+}

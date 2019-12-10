@@ -4,6 +4,8 @@ import data from './data.js'
 import logo from "./components/DisplayComponents/Logo";
 import Display from './components/DisplayComponents/Display.js'
 import SpecialButton from './components/ButtonComponents/SpecialButtons/SpecialButton'
+import OperatorButton from './components/ButtonComponents/OperatorButtons/OperatorButton.js'
+import NumberButton from './components/ButtonComponents/NumberButtons/NumberButton.js'
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -14,6 +16,13 @@ function App() {
 
 console.log(data)
 const [display, setDisplay] = useState(0)
+
+let specialClickhandler = (buttonName)=>{ 
+console.log(buttonName)
+setDisplay(buttonName)
+
+}
+
   return (
     <div className="container">
       <Logo />
@@ -21,13 +30,25 @@ const [display, setDisplay] = useState(0)
        <Display
        theDisplay={display}
        /> 
+       <section className="buttonContainer">
        {
          data.specials.map(x=>{
-           return (<SpecialButton buttonName={x}/>
+           return (<SpecialButton buttonName={x} clickHandler={specialClickhandler}/>
 
            )
          })
        }
+<OperatorButton
+buttonName={data.operators[0].char}
+  clickHandler={specialClickhandler}/>
+  {
+         data.numbers.map(x=>{
+           return (<SpecialButton buttonName={x} clickHandler={specialClickhandler}/>
+
+           )
+         })
+       }
+       </section>
       </div>
     </div>
   );
