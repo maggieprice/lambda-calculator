@@ -1,8 +1,8 @@
 import React from "react";
 
-const Display = (banana) => {
-  console.log(banana)
-  return <div className="display">{banana.theDisplay}
+const Display = (infernalProps) => {
+  return <div className="display">
+    {infernalProps.theDisplay}
   </div>;
 };
 export default Display
