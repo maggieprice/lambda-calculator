@@ -20,3 +20,25 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+.button {
+    width:10%;
+    border-radius: 100%;
+    height: 10%;
+    margin:1%;
+    padding:10%;
+}
+
+
+.button:nth-last-of-type(3){
+    width: 44%;
+    border-radius: 60px;
+}
+.operator {
+    background-color:lightblue;
+}
+.number {
+    background-color:steelblue;
+}
+.special {
+    background-color:dodgerblue;
+}
